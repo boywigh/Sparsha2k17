@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context="boywigh.engineersday.MainActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_below="@+id/btn_vis"
+                android:id="@+id/btn_event"
+                android:contentDescription="Events"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/eventbutton" />
+
+            <ImageButton
+                android:id="@+id/btn_vis"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:contentDescription="About Visvesvarya"
+                app:srcCompat="@drawable/aboutsirmvbutton" />
+
+            <ImageButton
+                android:layout_below="@id/btn_event"
+                android:id="@+id/btn_about"
+                android:layout_width="match_parent"
+                android:contentDescription="About Events"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/abouteventbutton" />
+
+            <ImageButton
+                android:layout_below="@id/btn_about"
+                android:contentDescription="Contact Us"
+                android:id="@+id/btn_contact"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/contactusbutton" />
+
+        </RelativeLayout>
+        <com.amazon.device.ads.AdLayout
+            android:id="@+id/adview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
