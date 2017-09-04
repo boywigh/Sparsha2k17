@@ -21,11 +21,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Register"
@@ -39,21 +34,17 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.mopub.mobileads.MoPubActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity
-            android:name="com.mopub.mobileads.MraidActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity
-            android:name="com.mopub.common.MoPubBrowser"
-            android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity
-            android:name="com.mopub.mobileads.MraidVideoPlayerActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity android:name=".mvactivity" />
         <activity android:name=".acivityabout" />
-        <activity android:name=".contactactivity"></activity>
+        <activity android:name=".contactactivity" />
+        <activity android:name=".activitythankyou" />
+        <activity android:name=".splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

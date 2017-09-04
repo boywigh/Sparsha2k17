@@ -1,13 +1,21 @@
 package boywigh.engineersday;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Register extends Activity implements ServerGetRequest.Response {
+import java.io.IOException;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
+public class Register extends Activity /*implements ServerGetRequest.Response*/ {
 
 
     Button btnreg;
@@ -44,19 +52,14 @@ public class Register extends Activity implements ServerGetRequest.Response {
                 choice = regtem.getChoice();
                 Toast.makeText(Register.this, regtem.getChoice() + regtem.getPclass() + regtem.getPsec() + regtem.getPnumber() + regtem.getPname(), Toast.LENGTH_SHORT).show();
 
-
-                Toast.makeText(Register.this, "Please wait.....", Toast.LENGTH_SHORT).show();
-
-                serverRequest();
+              Callme callme = new Callme(Register.this);
+                callme.execute();
+                Intent intent = new Intent(Register.this, activitythankyou.class);
+                startActivity(intent);
             }
 
         });
 
     }
-
-    public void serverRequest(){
-        String url="http://sparsha2k17.boywigh.ga/qadd.php?code="+regtem.getChoice()+"&pname="+regtem.getPname()+"&psec="+regtem.getPsec()+"&pnum="+regtem.getPnumber()+"&pclass="+regtem.getPclass();
-        new ServerGetRequest(this,c);
-    }
-
 }
+

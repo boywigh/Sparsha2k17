@@ -6,10 +6,7 @@
     android:layout_height="match_parent"
     tools:context="boywigh.engineersday.contactactivity"
     android:background="@drawable/back">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
+         <LinearLayout
             android:orientation="vertical"
             android:gravity="center_vertical"
             android:layout_width="match_parent"
@@ -19,17 +16,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:textSize="20dp"
+                android:textSize="24dp"
                 android:textColor="@color/colorAccent"/>
             <TextView
                 android:id="@+id/txtcred"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:textSize="20dp"
+                android:textSize="24dp"
                 android:textColor="@color/colorAccent"/>
 
         </LinearLayout>
-    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
